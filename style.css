@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.hiro{
+    height: 100vh;
+    background: url('images/background.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.content h1{
+    font-size: 3.2rem;
+}
+.content span{
+    color: #1f1f1f;
+    font-size: .9rem;
+}
+.timer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 6rem;
+    background-color: #000;
+    color: #fff;
+    margin: 2rem 0;
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+}
+.time h2{
+    font-size: 2.3rem;
+}
+.time span{
+    color: #ddd;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.input {
+    backdrop-filter: blur(5px);
+    background: rgba(228, 228, 228, 0.555);
+    width: 18.5rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 2rem;
+}
+.input input,.input input:focus{
+    width: 15rem;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background: transparent;
+    text-align: center;
+    padding: 1rem 2rem;
+    color: #000;
+    font-weight: 700;
+}
+.input input::placeholder{
+    color: #272727;
+    font-weight: 400;
+}
+.input i{
+    padding: .9rem;
+    background-color: #000;
+    color: #ff97a8;
+    border-radius: 2rem;
+}
+
+@media only screen and (max-width: 580px){
+    .timer{
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    .content h1{
+        font-size: 2.5rem;
+    }
+} 

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Made by Morsalin Nur for BlaɔkPink</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="hiro">
+        <div class="content">
+            <h1>Coming Soon!</h1>
+            <span>STAY TURNED</span>
+            <div class="timer">
+                <div class="time">
+                    <h2 class="days">00</h2>
+                    <span>Days</span>
+                </div>
+                <div class="time">
+                    <h2 class="hours">23</h2>
+                    <span>Hours</span>
+                </div>
+                <div class="time">
+                    <h2 class="minutes">59</h2>
+                    <span>Munites</span>
+                </div>
+                <div class="time">
+                    <h2 class="seconds">38</h2>
+                    <span>Secs</span>
+                </div>
+            </div>
+            <div class="input">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" placeholder="SUBSCRIBE NOW">
+            </div>
+        </div>
+    </section>
+    <script>
+        //set the date
+
+
+        let countDownDate = new Date('sep 30, 2022 14:00:00');
+
+        let x = setInterval(function () {
+            //today date
+
+            let nowDate = new Date().getTime();
+
+            //destance
+
+            let destance = countDownDate - nowDate;
+
+            //time
+
+            let days = Math.floor(destance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor(destance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+            let minutes = Math.floor(destance % (1000 * 60 * 60) / (1000 * 60));
+            let seconds = Math.floor(destance % (1000 * 60) / 1000);
+
+            //output result
+
+            document.querySelector(".days").innerHTML = days;
+            document.querySelector(".hours").innerHTML = hours;
+            document.querySelector(".minutes").innerHTML = minutes;
+            document.querySelector(".seconds").innerHTML = seconds;
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>
